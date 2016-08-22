@@ -17,11 +17,6 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ConnectionManager.sharedInstance.getAllProducts() {
-            (success, products) in
-            
-        }
-        
         // Make the status bar show in side menu
         SideMenuManager.menuFadeStatusBar = false
         
@@ -33,7 +28,9 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate {
         // (Can be any UIViewController subclass)
         // Make sure the title property of all view controllers is set
         // Example:
-        let latestViewController : UIViewController = UIViewController()
+        
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let latestViewController = mainStoryboard.instantiateViewControllerWithIdentifier("CatalogViewController")
         latestViewController.title = "Latest"
         controllerArray.append(latestViewController)
         
