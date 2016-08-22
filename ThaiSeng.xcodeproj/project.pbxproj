@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B84F8BAF1D6AB2A600F44128 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84F8BAE1D6AB2A600F44128 /* ConnectionManager.swift */; };
+		B84F8BB11D6AB78900F44128 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84F8BB01D6AB78900F44128 /* Product.swift */; };
+		B84F8BB31D6AB82600F44128 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84F8BB21D6AB82600F44128 /* Package.swift */; };
 		B8905F681D32F9A600B8957B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8905F671D32F9A600B8957B /* AppDelegate.swift */; };
-		B8905F6A1D32F9A600B8957B /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8905F691D32F9A600B8957B /* CatalogViewController.swift */; };
+		B8905F6A1D32F9A600B8957B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8905F691D32F9A600B8957B /* HomeViewController.swift */; };
 		B8905F6D1D32F9A600B8957B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8905F6B1D32F9A600B8957B /* Main.storyboard */; };
 		B8905F701D32F9A700B8957B /* ThaiSeng.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B8905F6E1D32F9A700B8957B /* ThaiSeng.xcdatamodeld */; };
 		B8905F721D32F9A700B8957B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8905F711D32F9A700B8957B /* Assets.xcassets */; };
@@ -19,9 +22,12 @@
 /* Begin PBXFileReference section */
 		5D5F3EBA66DF86522AEB1452 /* Pods-ThaiSeng.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThaiSeng.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThaiSeng/Pods-ThaiSeng.debug.xcconfig"; sourceTree = "<group>"; };
 		ADC2F807ADBD387163A38E86 /* Pods_ThaiSeng.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThaiSeng.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B84F8BAE1D6AB2A600F44128 /* ConnectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
+		B84F8BB01D6AB78900F44128 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		B84F8BB21D6AB82600F44128 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		B8905F641D32F9A600B8957B /* ThaiSeng.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThaiSeng.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8905F671D32F9A600B8957B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B8905F691D32F9A600B8957B /* CatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
+		B8905F691D32F9A600B8957B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B8905F6C1D32F9A600B8957B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B8905F6F1D32F9A700B8957B /* ThaiSeng.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ThaiSeng.xcdatamodel; sourceTree = "<group>"; };
 		B8905F711D32F9A700B8957B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +57,42 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B84F8BAA1D6AB26800F44128 /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				B84F8BAD1D6AB28300F44128 /* Model */,
+				B84F8BAC1D6AB28100F44128 /* View */,
+				B84F8BAB1D6AB27E00F44128 /* Controller */,
+			);
+			name = MVC;
+			sourceTree = "<group>";
+		};
+		B84F8BAB1D6AB27E00F44128 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B8905F691D32F9A600B8957B /* HomeViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		B84F8BAC1D6AB28100F44128 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B8905F6B1D32F9A600B8957B /* Main.storyboard */,
+				B8905F731D32F9A700B8957B /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B84F8BAD1D6AB28300F44128 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B84F8BB01D6AB78900F44128 /* Product.swift */,
+				B84F8BB21D6AB82600F44128 /* Package.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		B8905F5B1D32F9A600B8957B = {
 			isa = PBXGroup;
 			children = (
@@ -72,11 +114,10 @@
 		B8905F661D32F9A600B8957B /* ThaiSeng */ = {
 			isa = PBXGroup;
 			children = (
+				B84F8BAA1D6AB26800F44128 /* MVC */,
 				B8905F671D32F9A600B8957B /* AppDelegate.swift */,
-				B8905F691D32F9A600B8957B /* CatalogViewController.swift */,
-				B8905F6B1D32F9A600B8957B /* Main.storyboard */,
+				B84F8BAE1D6AB2A600F44128 /* ConnectionManager.swift */,
 				B8905F711D32F9A700B8957B /* Assets.xcassets */,
-				B8905F731D32F9A700B8957B /* LaunchScreen.storyboard */,
 				B8905F761D32F9A700B8957B /* Info.plist */,
 				B8905F6E1D32F9A700B8957B /* ThaiSeng.xcdatamodeld */,
 			);
@@ -213,8 +254,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B84F8BB31D6AB82600F44128 /* Package.swift in Sources */,
 				B8905F701D32F9A700B8957B /* ThaiSeng.xcdatamodeld in Sources */,
-				B8905F6A1D32F9A600B8957B /* CatalogViewController.swift in Sources */,
+				B84F8BAF1D6AB2A600F44128 /* ConnectionManager.swift in Sources */,
+				B84F8BB11D6AB78900F44128 /* Product.swift in Sources */,
+				B8905F6A1D32F9A600B8957B /* HomeViewController.swift in Sources */,
 				B8905F681D32F9A600B8957B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

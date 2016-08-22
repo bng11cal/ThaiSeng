@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  ThaiSeng
 //
 //  Created by Brian Ng on 7/10/16.
@@ -10,12 +10,17 @@ import UIKit
 import SideMenu
 import PageMenu
 
-class CatalogViewController: UIViewController, CAPSPageMenuDelegate {
+class HomeViewController: UIViewController, CAPSPageMenuDelegate {
     var pageMenu : CAPSPageMenu?
     @IBOutlet weak var navigationBar: UINavigationBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ConnectionManager.sharedInstance.getAllProducts() {
+            (success, products) in
+            
+        }
         
         // Make the status bar show in side menu
         SideMenuManager.menuFadeStatusBar = false
