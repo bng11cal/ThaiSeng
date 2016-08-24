@@ -40,7 +40,7 @@ class CatalogViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSizeMake(screenSize.width/2 - 10, screenSize.height/2 - 10)
+        return CGSizeMake(screenSize.width/2 - 10, screenSize.height/3 - 10)
     }
     
 }

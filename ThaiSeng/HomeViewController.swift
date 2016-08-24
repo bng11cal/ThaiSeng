@@ -17,17 +17,19 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Make the status bar show in side menu
-        SideMenuManager.menuFadeStatusBar = false
+        self.setupSideMenu()
+        self.setupPageMenu()
         
+    }
+    
+    func setupSideMenu() {
+        SideMenuManager.menuFadeStatusBar = false
+        SideMenuManager.menuPresentMode = .MenuDissolveIn
+        SideMenuManager.menuBlurEffectStyle = .Light
+    }
+    func setupPageMenu() {
         // Array to keep track of controllers in page menu
         var controllerArray : [UIViewController] = []
-        
-        // Create variables for all view controllers you want to put in the
-        // page menu, initialize them, and add each to the controller array.
-        // (Can be any UIViewController subclass)
-        // Make sure the title property of all view controllers is set
-        // Example:
         
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let latestViewController = mainStoryboard.instantiateViewControllerWithIdentifier("CatalogViewController")
@@ -46,8 +48,7 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate {
         recentViewController.title = "Recently Viewed"
         controllerArray.append(recentViewController)
         
-        // Customize page menu to your liking (optional) or use default settings by sending nil for 'options' in the init
-        // Example:
+        // Customize page menu parameters
         let parameters: [CAPSPageMenuOption] = [
             .MenuItemSeparatorWidth(10),
             .MenuItemWidth(100),
@@ -56,28 +57,22 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate {
             .UnselectedMenuItemLabelColor(UIColor.whiteColor())
         ]
         
-        // Initialize page menu with controller array, frame, and optional parameters
+        // Initialize page menu
         pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0,navigationBar.frame.size.height, self.view.frame.width, self.view.frame.height - navigationBar.frame.size.height), pageMenuOptions: parameters)
         
         // Set pageMenu delegate
         pageMenu!.delegate = self
         
-        // Lastly add page menu as subview of base view controller view
-        // or use pageMenu controller in you view hierachy as desired
+        // Add page menu to view
         self.view.addSubview(pageMenu!.view)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func willMoveToPage(controller: UIViewController, index: Int) {
-    
+        
     }
     
     func didMoveToPage(controller: UIViewController, index: Int) {
-    
+        
     }
 
 

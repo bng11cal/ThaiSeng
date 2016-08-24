@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -87,28 +86,52 @@
                                             <rect key="frame" x="0.0" y="0.0" width="155" height="280"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TGr-y1-9nj">
-                                                    <rect key="frame" x="59" y="255" width="38" height="17"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGr-y1-9nj">
+                                                    <rect key="frame" x="61" y="230" width="33" height="15"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="15" id="q11-Df-6tP"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Wines-(Winepak)-(BLUESS)-(Merlot)_(tall_medium)" translatesAutoresizingMaskIntoConstraints="NO" id="USE-Td-e1x">
-                                                    <rect key="frame" x="0.0" y="0.0" width="155" height="255"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbn-Mx-64M">
+                                                    <rect key="frame" x="63" y="260" width="29" height="15"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="USE-Td-e1x" secondAttribute="height" multiplier="31:51" id="sav-J6-M8u"/>
+                                                        <constraint firstAttribute="height" constant="15" id="gEb-EY-V3b"/>
                                                     </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Wines-(Winepak)-(BLUESS)-(Merlot)_(tall_medium)" translatesAutoresizingMaskIntoConstraints="NO" id="USE-Td-e1x">
+                                                    <rect key="frame" x="0.0" y="0.0" width="155" height="230"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTo-ps-K3X">
+                                                    <rect key="frame" x="54" y="245" width="46" height="15"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="15" id="n1j-u7-uqP"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="TGr-y1-9nj" firstAttribute="bottom" secondItem="wPV-LJ-pzB" secondAttribute="bottomMargin" id="6DN-CW-pjI"/>
-                                            <constraint firstItem="USE-Td-e1x" firstAttribute="top" secondItem="wPV-LJ-pzB" secondAttribute="top" id="Fwg-LM-ev7"/>
-                                            <constraint firstAttribute="trailing" secondItem="USE-Td-e1x" secondAttribute="trailing" id="HCH-lC-7lW"/>
+                                            <constraint firstItem="PTo-ps-K3X" firstAttribute="top" secondItem="TGr-y1-9nj" secondAttribute="bottom" id="06o-Lk-CTC"/>
+                                            <constraint firstItem="Lbn-Mx-64M" firstAttribute="centerX" secondItem="wPV-LJ-pzB" secondAttribute="centerX" id="5Kj-0x-EUe"/>
+                                            <constraint firstItem="TGr-y1-9nj" firstAttribute="top" secondItem="USE-Td-e1x" secondAttribute="bottom" id="DHX-cp-JNw"/>
+                                            <constraint firstItem="Lbn-Mx-64M" firstAttribute="top" secondItem="PTo-ps-K3X" secondAttribute="bottom" id="Hfi-E6-gdm"/>
+                                            <constraint firstAttribute="trailing" secondItem="USE-Td-e1x" secondAttribute="trailing" id="LaL-qa-q5c"/>
+                                            <constraint firstItem="USE-Td-e1x" firstAttribute="leading" secondItem="wPV-LJ-pzB" secondAttribute="leading" id="Lcz-ds-bly"/>
                                             <constraint firstItem="TGr-y1-9nj" firstAttribute="centerX" secondItem="wPV-LJ-pzB" secondAttribute="centerX" id="auL-ZM-dHc"/>
-                                            <constraint firstItem="USE-Td-e1x" firstAttribute="leading" secondItem="wPV-LJ-pzB" secondAttribute="leading" id="iD5-w8-nC2"/>
+                                            <constraint firstAttribute="bottom" secondItem="Lbn-Mx-64M" secondAttribute="bottom" constant="5" id="ljR-19-nVY"/>
+                                            <constraint firstItem="USE-Td-e1x" firstAttribute="top" secondItem="wPV-LJ-pzB" secondAttribute="top" id="n0k-hS-7FK"/>
+                                            <constraint firstItem="PTo-ps-K3X" firstAttribute="centerX" secondItem="wPV-LJ-pzB" secondAttribute="centerX" id="xi4-Jn-vuM"/>
+                                            <constraint firstItem="USE-Td-e1x" firstAttribute="centerX" secondItem="wPV-LJ-pzB" secondAttribute="centerX" id="yuJ-EH-9ks"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="name" destination="TGr-y1-9nj" id="Jmm-I4-2Ll"/>
