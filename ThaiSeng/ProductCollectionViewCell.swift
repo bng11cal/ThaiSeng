@@ -11,9 +11,18 @@ import UIKit
 
 class ProductCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var country: UILabel!
+    @IBOutlet weak var price: UILabel!
     
     override func awakeFromNib() {
         
     }
+    
+    func updateContent(product: Product) {
+        self.name.text = product.name
+        self.country.text = product.country
+        self.price.text = "RM" + (product.unitPrice?.description)! + " / " + product.unitVol!.description + "mL"
+    }
+    
     
 }

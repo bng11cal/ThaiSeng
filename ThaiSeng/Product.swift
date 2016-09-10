@@ -11,15 +11,17 @@ import Foundation
 class Product {
     var id:String?
     var name:String?
-    var category:String?
+    var type:String?
     var company:String?
-    var origin:String?
-    var percentAlcohol:Double?
+    var country:String?
+    var percentAlcohol:Int?
     var status:String?
+    var unitPrice:Double?
+    var unitVol:Int?
     var label:String?
     var grapeVarieties:[String] = [String]()
     var vintage:Int?
     var description:String?
-    var batchDate:NSDate?
+    var dateAdded:NSDate?
     var packages:[Package] = [Package]()
 }
